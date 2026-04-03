@@ -1,0 +1,16 @@
+class Solution {
+public:
+    bool hasDuplicate(vector<int>& nums) {
+        std::unordered_map<int, int> map;
+
+        for (const auto& num : nums) {
+            if (map[num] != 0) {
+                return true;
+            }
+            map[num]++;
+        }
+
+        return false;
+        
+    }
+};
